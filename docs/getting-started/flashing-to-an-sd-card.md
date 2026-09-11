@@ -51,6 +51,15 @@ Once it is running, you can optionally install it to internal storage so it boot
         - Toggle boot mode to Linux
         - Choose Start to exit
 
+        !!! warning "Retroid Pocket 5 and Pocket Flip 2 panel variants"
+
+            Retroid has shipped these devices with two different display panels,
+            with no reliable external way to tell them apart. Select the standard
+            device model first. If Armada boots but the screen remains black,
+            restart while holding VOL- and select the same model's **Visionox**
+            entry instead. This changes the device tree used at boot and does not
+            require flashing the ABL again.
+
 5. Wait for Steam first-run setup.
 
     !!! note
