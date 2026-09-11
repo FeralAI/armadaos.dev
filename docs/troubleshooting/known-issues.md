@@ -2,7 +2,7 @@
 - **White flash when initiating sleep and on boot-up.** This is a Retroid Pocket Nova-specific
   issue. Sleep flash occurs on S2idle only, does not affect sleep behavior otherwise.
 - **Controls freeze when opening QAM.** Occurs in high GPU load scenarios. Toggling
-  Vulkan Realtime Queue in **[Armada Control](./armada-control.md)** can alleviate the issue by allowing
+  Vulkan Realtime Queue in **[Armada Control](../using-armada/armada-control.md)** can alleviate the issue by allowing
   a half-summoned QAM to be dismissed with a second press of the QAM key.
 - **"Resuming" window on wake freezes controls.** Usually resolves itself after a short time once
   the device has reconnected to the Internet following wake from sleep.
