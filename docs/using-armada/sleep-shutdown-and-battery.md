@@ -1,4 +1,6 @@
-Pressing the power button does a "fake suspend" (inspired by ROCKNIX) rather than
-real S3 sleep: it blanks the screen and freezes the session, and the same press
-wakes it. Because the device does not truly sleep, idle battery drain is higher
-than it would be with real suspend.
+S2idle "native" sleep has been implemented in ArmadaOS but is currently a work-in-progress.
+Sleep and wake currently function correctly for the most part, but there are still
+bugs and power draw remains higher-than-ideal, though lower than "fake sleep".
+
+If desired, "fake sleep" is still available as an option to users under
+**[Armada Control](./armada-control.md)**.

@@ -22,3 +22,7 @@ If an entry has been installed, it will have one of the following statuses:
 | --- | --- |
 | ![Armada Store - Installed](../assets/images/armada-store/status-icon-installed.jpg) | Entry has been installed. If this is an application, a non-Steam shortcut was created. |
 | ![Armada Store - Update Available](../assets/images/armada-store/status-icon-update.jpg) | Entry has an update available. |
+
+!!! note 
+
+    If an application has been installed, clicking on its entry will allow you to directly add the application to Steam.

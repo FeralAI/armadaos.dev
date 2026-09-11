@@ -18,7 +18,7 @@ Once it is running, you can optionally install it to internal storage so it boot
     - Insert the SD card, boot into Android, and copy the `rocknix_abl` folder to
       the root of your internal storage.
 
-    - Identify your SoC from [Supported Devices](../devices/supported-devices.md) (`SM8550`, `SM8650`, or
+    - Identify your SoC from [Supported Devices](../devices/supported-devices.md) (`SM8250`, `SM8550`, `SM8650`, or
       `SM8750`).
 
         !!! warning
@@ -72,3 +72,7 @@ Once it is running, you can optionally install it to internal storage so it boot
     you may see another 60 seconds of black before the login screen appears.
 
 Proceed to [Install to Internal Storage](./install-to-internal-storage.md) if you would like.
+
+!!! note
+
+    If you are an experienced user and know your way around Linux, you may want to try the bleeding-edge of features offered by Armada. Preview OS images are also available, which offer new features at the cost of system stability. See **[Preview Images](./preview-images.md)**.
