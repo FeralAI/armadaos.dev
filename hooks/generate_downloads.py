@@ -42,42 +42,50 @@ def _normalize_release_body(body):
     if not body:
         return body
 
-    def replace_link(match):
-        target = match.group(1)
-        if target.startswith(("http://", "https://", "mailto:", "#")):
-            return match.group(0)
-        normalized = target.strip()
-        if normalized.startswith("/"):
-            return match.group(0)
-        return match.group(0).replace(f"({target})", f"(https://github.com/armada-os/armada/blob/main/{normalized})")
-
-    body = re.sub(r"\]\((?!https?://|mailto:|#)([^)]+)\)", replace_link, body)
+    body = re.sub(r"\]\((?!https?://|mailto:|#)([^)]+)\)", lambda match: _normalize_link(match), body)
 
     lines = body.splitlines()
-    filtered = []
-    in_warning_block = False
+    normalized = []
+    in_warning = False
+    warning_lines = []
 
     for line in lines:
         stripped = line.strip()
 
-        if not in_warning_block and stripped.startswith("> [!WARNING]"):
-            in_warning_block = True
+        if stripped.startswith("> [!WARNING]"):
+            in_warning = True
+            warning_lines = ["!!! warning"]
+            normalized.append("")
             continue
 
-        if in_warning_block:
-            if stripped == "":
+        if in_warning:
+            if stripped.startswith(">"):
+                text = stripped[1:].strip()
+                if text:
+                    warning_lines.append(f"    {text}")
                 continue
-            if stripped.startswith("### Download"):
-                in_warning_block = False
+            if not stripped:
                 continue
-            continue
+            in_warning = False
+            normalized.extend(warning_lines)
+            normalized.append("")
 
-        if stripped.startswith("### Download"):
-            continue
+        normalized.append(line)
 
-        filtered.append(line)
+    if in_warning:
+        normalized.extend(warning_lines)
 
-    return "\n".join(filtered).strip()
+    return "\n".join(normalized).strip()
+
+
+def _normalize_link(match):
+    target = match.group(1)
+    if target.startswith(("http://", "https://", "mailto:", "#")):
+        return match.group(0)
+    normalized = target.strip()
+    if normalized.startswith("/"):
+        return match.group(0)
+    return match.group(0).replace(f"({target})", f"(https://github.com/armada-os/armada/blob/main/{normalized})")
 
 
 def _release_to_markdown(release):
