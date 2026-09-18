@@ -35,6 +35,7 @@ theme:
 
 nav:
   - Home: index.md
+  - Downloads: downloads/index.md
   - Getting Started:
       - Flash to an SD Card: getting-started/flashing-to-an-sd-card.md
       - Preview Images: getting-started/preview-images.md
@@ -119,6 +120,9 @@ nav:
   - Project:
       - Community: project/community.md
       - Credits: project/credits.md
+
+hooks:
+  - hooks/generate_downloads.py
 
 markdown_extensions:
   - abbr
