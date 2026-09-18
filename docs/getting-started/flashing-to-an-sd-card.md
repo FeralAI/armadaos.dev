@@ -5,7 +5,7 @@ Armada provides you the option to install entirely to a SD card.
 Once it is running, you can optionally install it to internal storage so it boots without the card (see [Install to Internal Storage](./install-to-internal-storage.md)).
 
 ## Steps
-1. Download `armada-YYYYMMDD.img.gz` from the latest [GitHub Release](https://github.com/armada-os/armada/releases/latest)
+1. Download the latest `armada-YYYYMMDD.img.gz` from the [Downloads page](../../downloads/)
 
 2. Flash the downloaded image to a 64GB or larger SD card (A2 speed for best results).
 
