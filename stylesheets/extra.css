@@ -1,0 +1,186 @@
+:root {
+  --armada-black: #0b0b0c;
+  --armada-surface-dark: #151517;
+  --armada-border-dark: #3a3a3f;
+  --armada-white: #f5f5f5;
+  --armada-muted-dark: #b8b8bd;
+  --armada-ink: #18181a;
+  --armada-muted-light: #55555b;
+  --armada-surface-light: #f5f5f5;
+  --armada-border-light: #d1d1d6;
+  --armada-warning-dark: #ffb224;
+  --armada-warning-light: #7a4700;
+}
+
+[data-md-color-scheme="slate"] {
+  --md-default-bg-color: var(--armada-black);
+  --md-default-fg-color: var(--armada-white);
+  --md-default-fg-color--light: var(--armada-muted-dark);
+  --md-default-fg-color--lighter: #8c8c92;
+  --md-default-fg-color--lightest: var(--armada-border-dark);
+  --md-primary-fg-color: var(--armada-black);
+  --md-primary-bg-color: var(--armada-white);
+  --md-accent-fg-color: #ffffff;
+  --md-accent-bg-color: var(--armada-black);
+  --md-typeset-a-color: #ffffff;
+  --md-code-bg-color: var(--armada-surface-dark);
+  --md-code-fg-color: var(--armada-white);
+}
+
+[data-md-color-scheme="default"] {
+  --md-default-bg-color: #ffffff;
+  --md-default-fg-color: var(--armada-ink);
+  --md-default-fg-color--light: var(--armada-muted-light);
+  --md-default-fg-color--lighter: #76767d;
+  --md-default-fg-color--lightest: var(--armada-border-light);
+  --md-primary-fg-color: var(--armada-black);
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: var(--armada-black);
+  --md-accent-bg-color: #ffffff;
+  --md-typeset-a-color: var(--armada-ink);
+  --md-code-bg-color: var(--armada-surface-light);
+  --md-code-fg-color: var(--armada-ink);
+}
+
+.md-header__button.md-logo img,
+.md-nav__button.md-logo img {
+  filter: invert(1);
+}
+
+.md-header__button.md-logo {
+  margin-right: 0;
+  padding-right: 0.2rem;
+}
+
+.md-header__button.md-logo img {
+  transform: translateY(-0.1rem);
+}
+
+.md-header__title {
+  margin-left: 0.35rem;
+}
+
+.md-typeset a:not(.md-button) {
+  text-decoration: underline;
+  text-decoration-thickness: 0.06rem;
+  text-underline-offset: 0.14rem;
+}
+
+.md-typeset a:not(.md-button):hover {
+  text-decoration-thickness: 0.1rem;
+}
+
+.md-typeset a.headerlink {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 0.15rem solid var(--armada-ink);
+  outline-offset: 0.15rem;
+}
+
+[data-md-color-scheme="slate"] :focus-visible {
+  outline-color: #ffffff;
+  box-shadow: 0 0 0 0.1rem var(--armada-black);
+}
+
+.md-typeset .md-button {
+  align-items: center;
+  border-radius: 0.2rem;
+  display: inline-flex;
+  min-height: 2.2rem;
+  padding: 0.45rem 1rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--armada-black);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary:hover,
+[data-md-color-scheme="slate"] .md-typeset .md-button--primary:focus {
+  background-color: var(--armada-white);
+  border-color: var(--armada-white);
+  color: var(--armada-black);
+}
+
+.armada-hero {
+  margin: 1.6rem 0 2.4rem;
+  max-width: 42rem;
+}
+
+.armada-hero__mark {
+  display: block;
+  height: auto;
+  margin-bottom: 1.2rem;
+  width: clamp(4.5rem, 12vw, 7rem);
+}
+
+[data-md-color-scheme="slate"] .armada-hero__mark {
+  filter: invert(1);
+}
+
+.md-typeset .armada-hero h1 {
+  font-size: clamp(2.4rem, 8vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  margin: 0 0 0.65rem;
+}
+
+.md-typeset .armada-hero h2 {
+  font-size: clamp(1.15rem, 3vw, 1.55rem);
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin: 0 0 0.8rem;
+}
+
+.armada-hero p {
+  font-size: 1rem;
+  max-width: 34rem;
+}
+
+.armada-hero .md-button {
+  margin: 0.45rem 0.45rem 0 0;
+}
+
+/* Without a navigation sidebar, Material allows the article to consume the
+   full grid. Keep the landing page closer to a comfortable reading width. */
+body:has(.armada-hero) .md-content {
+  margin-inline: auto;
+  max-width: 48rem;
+}
+
+.md-typeset .grid.cards > ul > li {
+  border-color: var(--armada-border-light);
+  border-radius: 0.25rem;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .grid.cards > ul > li {
+  background-color: var(--armada-surface-dark);
+  border-color: var(--armada-border-dark);
+}
+
+[data-md-color-scheme="default"] .md-typeset .grid.cards > ul > li {
+  background-color: var(--armada-surface-light);
+}
+
+.md-typeset .admonition.warning {
+  border-color: var(--armada-warning-light);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning {
+  border-color: var(--armada-warning-dark);
+}
+
+@media screen and (max-width: 44.984375em) {
+  .armada-hero {
+    margin-top: 0.8rem;
+  }
+
+  .armada-hero .md-button {
+    justify-content: center;
+    width: 100%;
+  }
+}
