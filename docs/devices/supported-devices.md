@@ -30,6 +30,7 @@ sidebar to jump to its devices. Device-specific guides are linked where availabl
 | AYN Thor | SM8550 | ✅ Tested | — |
 | AYN Thor Lite | SM8250 | ✅ Tested | — |
 | AYN Odin 3 | SM8750 | ✅ Tested | — |
+| AYN Odin 3 Portal | SM8750 | ✅ Tested | — |
 
 ## Retroid
 
@@ -39,6 +40,7 @@ sidebar to jump to its devices. Device-specific guides are linked where availabl
 | Retroid Pocket Flip 2 | SM8250 | ✅ Tested | — |
 | Retroid Pocket Mini | SM8250 | ⚪ Untested | — |
 | Retroid Pocket Mini V2 | SM8250 | ✅ Tested | — |
+| Retroid Pocket Duo | SM7750 | ✅ Tested | — |
 | Retroid Pocket 6 | SM8550 | ✅ Tested | — |
 | Retroid Pocket Nova | SM8550 | ✅ Tested | — |
 
