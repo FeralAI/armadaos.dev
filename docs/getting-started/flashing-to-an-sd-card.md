@@ -13,13 +13,12 @@ Once it is running, you can optionally install it to internal storage so it boot
 
         Common flashing tools include [Balena Etcher](https://www.balena.io/etcher/), [Raspberry Pi Imager](https://www.raspberrypi.com/software/), and [Win32 Disk Imager](https://sourceforge.net/projects/win32diskimager/). If you're skilled with the command line, `dd` works fine too.
 
-3. Flash the ROCKNIX ABL for your device.
+3. Flash OpenABL for your device.
 
-    - Insert the SD card, boot into Android, and copy the `rocknix_abl` folder to
+    - Insert the SD card, boot into Android, and copy the `openabl` folder to
       the root of your internal storage.
 
-    - Identify your SoC from [Supported Devices](../devices/supported-devices.md) (`SM8250`, `SM8550`, `SM8650`, or
-      `SM8750`).
+    - Identify your SoC from [Supported Devices](../devices/supported-devices.md) (`SM7750`, `SM8250`, `SM8550`, `SM8650`, or `SM8750`).
 
         !!! warning
 
@@ -40,7 +39,7 @@ Once it is running, you can optionally install it to internal storage so it boot
             *Thanks Bob*{ .root-script-easter-egg }
 
     - Choose the option to select a script, browse to your SoC's subfolder on
-      internal storage (for example, `rocknix_abl/SM8550`), and select
+      internal storage (for example, `openabl/SM8550`), and select
       `backup_abl.sh`.
 
     - Copy the backup (`abl_a.img` and `abl_b.img`, written into your SoC subfolder)
