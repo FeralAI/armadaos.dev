@@ -20,18 +20,14 @@ When it finishes, **power off and remove the SD card.**
 
 ## Check Boot Source
 
-To ensure your device boots from internal storage, enter the ROCKNIX ABL by holding **VOL-** as the device powers on.
+To ensure your device boots from internal storage, enter OpenABL by holding **VOL-** as the device powers on.
 
-Once in the ABL, look for the **Boot source** option and make sure it is set to **Internal**.
-
-![ROCKNIX ABL - Boot Source](../assets/images/getting-started/abl-switch-boot-source.jpg){ width="300" }
-
-If it says anything other than **Internal**, use **VOL-** and **VOL+** until the **Switch boot source** option is selected, then press the **POWER** button to toggle the boot source.
+Once in the ABL, use use **VOL-** and **VOL+** to navigate the entrires, and **POWER** to change options. Ensure **Boot mode** is set to **Linux**, and **Boot source** is set to **Internal**.
 
 ## Recovering a Failed Installation
 
 If an installation is interrupted, rerun Armada Installer from the SD card to finish it.
 
-If the device will not boot the internal installation, enter the ROCKNIX ABL and change the **Boot source** to **SDCard** to attempt the installation from the SD card.
+If the device will not boot the internal installation, enter OpenABL and change the **Boot source** to **SD Card** to attempt the installation from the SD card again.
 
 If you want to restore the full Android user data partition, see [Uninstalling and Restoring Android](./uninstalling-and-restoring-android.md).
